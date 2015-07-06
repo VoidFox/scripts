@@ -37,11 +37,11 @@ while 1:
     if data.find ( '!cheatbot quit' ) != -1:
         cb.send("QUIT\r\n")
 
-    if data.find ( 'joined ##egypt' ) != -1:
+    if data.find ( 'JOIN ##egypt' ) != -1:
         cb.send("PRIVMSG ##egypt : Hello and Welcome to this Madhouse!\r\n")
 
-   if data.find ( 'cheese' ) != -1:
-      irc.send ( 'PRIVMSG ##egypt : WHERE!?!?!?!?!?!?!1one \r\n' )
+    if data.find ( 'cheese' ) != -1:
+      irc.send ("PRIVMSG ##egypt : WHERE!?!?!?!?!?!?!1one \r\n")
 
     if inplay == True:
         data = data.lower()
@@ -49,6 +49,7 @@ while 1:
             if data.find( i.lower() ) != -1:
                 for item in diction[i]:
                     cb.send("PRIVMSG ##egypt :" + item + "\r\n")
+                    time.sleep(2)
                     print item
 
 
