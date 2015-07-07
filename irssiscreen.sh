@@ -8,10 +8,14 @@ irssi_screen=`screen -ls | grep irssi`
 
 #determine if screen+irssi is already running
 if [[ -n "$irssi_screen" ]]
+
 then # if yes then reconnect screen session
-	urxvtc -g 80x30+0+0 -e screen -r irssi
+#	urxvtc -g 80x30+0+0 -e screen -r irssi
+                               screen -r irssi
+
 else # no screen+irssi running, start new screen session running irssi
-	urxvtc -g 80x30+0+0 -e screen -S irssi irssi
+#       urxvtc -g 80x30+0+0 -e screen -S irssi irssi
+                               screen -S irssi irssi
 fi
 
 exit 0
