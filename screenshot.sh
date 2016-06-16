@@ -1,6 +1,6 @@
 #!/bin/bash
 #Screenshot Script
-cd /home/el/pic/shots;
+cd ~;
 today=`eval date +%Y-%m-%d-%S`;
 file=$today".png"
 scrot $file $@ -q 75; 
